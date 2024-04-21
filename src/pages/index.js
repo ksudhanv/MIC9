@@ -3,19 +3,16 @@ import axios from 'axios'
 
 export default function Example() {
   
-  const [content, setContent] = useState('')
-  const [author, setAuthor] = useState('')
+  const [person, setPerson] = useState('')
   const quote = () => {
     axios.get('https://api.quotable.io/random').then(response => {
-      setContent(response.data.content)
-      setAuthor(response.data.author)
+      setPerson(response.data.author)
     })
   }
     return (
     <div>
-      <h2 className='quote'>{content}</h2>
-        <p className='quote-author'>{author}</p>
-        <button className='quote-button' variant="primary" onClick={quote}>Click here</button>
+        <p>{person}</p>
+        <button onClick={quote}>Click here for a random person</button>
     </div>
   )
 }
