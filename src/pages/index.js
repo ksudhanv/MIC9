@@ -15,7 +15,7 @@ export default function Example() {
     <div>
       <h2 className='quote'>{content}</h2>
         <p className='quote-author'>{author}</p>
-        <button className='quote-button' variant="primary" onClick={quote}>Generate a quote to brighten your day</button>
+        <button className='quote-button' variant="primary" onClick={quote}>Click here</button>
     </div>
   )
 }
